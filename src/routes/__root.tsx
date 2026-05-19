@@ -9,6 +9,8 @@ import {
 } from "@tanstack/react-router";
 
 import appCss from "../styles.css?url";
+import { AppShell } from "@/components/app-shell";
+import { Toaster } from "sonner";
 
 function NotFoundComponent() {
   return (
@@ -107,7 +109,10 @@ function RootComponent() {
 
   return (
     <QueryClientProvider client={queryClient}>
-      <Outlet />
+      <AppShell>
+        <Outlet />
+      </AppShell>
+      <Toaster richColors position="top-right" />
     </QueryClientProvider>
   );
 }
