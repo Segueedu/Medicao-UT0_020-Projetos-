@@ -163,7 +163,7 @@ function Dashboard() {
         </select>
         <select value={unFiltro} onChange={(e) => setUnFiltro(e.target.value)} className="rounded-md border border-input bg-background px-3 py-1.5 text-sm">
           <option value="">Todas unidades</option>
-          {unidades.map((u) => <option key={u} value={u}>{u}</option>)}
+          {unidades.map((u) => <option key={u as string} value={u as string}>{u as string}</option>)}
         </select>
       </div>
 
