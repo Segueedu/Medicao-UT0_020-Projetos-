@@ -14,16 +14,126 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      apontamentos: {
+        Row: {
+          created_at: string
+          data_fim: string | null
+          data_inicio: string | null
+          equipe: string
+          especialidade: string | null
+          horas_decimais: number
+          id: number
+          mes_ano: string
+          numero_os: string | null
+          preco_hora: number | null
+          semana_do_mes: number | null
+          tecnico_codigo: string
+          tecnico_nome: string
+          tipo_solicitacao: string | null
+          unidade_negocio: string | null
+          valor_mao_obra: number | null
+        }
+        Insert: {
+          created_at?: string
+          data_fim?: string | null
+          data_inicio?: string | null
+          equipe: string
+          especialidade?: string | null
+          horas_decimais?: number
+          id?: number
+          mes_ano: string
+          numero_os?: string | null
+          preco_hora?: number | null
+          semana_do_mes?: number | null
+          tecnico_codigo: string
+          tecnico_nome: string
+          tipo_solicitacao?: string | null
+          unidade_negocio?: string | null
+          valor_mao_obra?: number | null
+        }
+        Update: {
+          created_at?: string
+          data_fim?: string | null
+          data_inicio?: string | null
+          equipe?: string
+          especialidade?: string | null
+          horas_decimais?: number
+          id?: number
+          mes_ano?: string
+          numero_os?: string | null
+          preco_hora?: number | null
+          semana_do_mes?: number | null
+          tecnico_codigo?: string
+          tecnico_nome?: string
+          tipo_solicitacao?: string | null
+          unidade_negocio?: string | null
+          valor_mao_obra?: number | null
+        }
+        Relationships: []
+      }
+      tecnicos: {
+        Row: {
+          codigo: string
+          created_at: string
+          equipe: string | null
+          especialidade: string | null
+          nome: string
+          updated_at: string
+        }
+        Insert: {
+          codigo: string
+          created_at?: string
+          equipe?: string | null
+          especialidade?: string | null
+          nome: string
+          updated_at?: string
+        }
+        Update: {
+          codigo?: string
+          created_at?: string
+          equipe?: string | null
+          especialidade?: string | null
+          nome?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
+      user_roles: {
+        Row: {
+          created_at: string
+          id: string
+          role: Database["public"]["Enums"]["app_role"]
+          user_id: string
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+          role: Database["public"]["Enums"]["app_role"]
+          user_id: string
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          role?: Database["public"]["Enums"]["app_role"]
+          user_id?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
     }
     Functions: {
-      [_ in never]: never
+      has_role: {
+        Args: {
+          _role: Database["public"]["Enums"]["app_role"]
+          _user_id: string
+        }
+        Returns: boolean
+      }
     }
     Enums: {
-      [_ in never]: never
+      app_role: "admin" | "financeiro" | "tecnico"
     }
     CompositeTypes: {
       [_ in never]: never
@@ -150,6 +260,8 @@ export type CompositeTypes<
 
 export const Constants = {
   public: {
-    Enums: {},
+    Enums: {
+      app_role: ["admin", "financeiro", "tecnico"],
+    },
   },
 } as const
