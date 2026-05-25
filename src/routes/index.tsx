@@ -10,7 +10,7 @@ export const Route = createFileRoute("/")({
   component: HomePage,
   head: () => ({
     meta: [
-      { title: "Ranking de Técnicos — Medição OBR" },
+      { title: "Ranking de Técnicos — Medição PROJETOS" },
       { name: "description", content: "Acompanhe em tempo real o ranking de horas apontadas pelos técnicos de manutenção predial." },
     ],
   }),
@@ -54,7 +54,7 @@ function HomePage() {
         style={{ background: "var(--gradient-hero)" }}
       >
         <div className="max-w-6xl mx-auto">
-          <p className="text-xs uppercase tracking-[0.2em] text-primary-foreground/70">Competição mensal</p>
+
           <h1 className="mt-2 font-display text-4xl md:text-5xl font-bold">Ranking de Técnicos</h1>
           <p className="mt-2 text-primary-foreground/80 capitalize">{mesLabel} · Meta: 150h por técnico</p>
 

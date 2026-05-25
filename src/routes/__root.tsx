@@ -74,10 +74,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Medição OBR — Gestão de Equipes" },
+      { title: "Medição PROJETOS" },
       { name: "description", content: "Ranking de técnicos, apontamentos de horas e dashboard financeiro de medição de obra." },
-      { property: "og:title", content: "Medição OBR — Gestão de Equipes" },
-      { name: "twitter:title", content: "Medição OBR — Gestão de Equipes" },
+      { property: "og:title", content: "Medição PROJETOS" },
+      { name: "twitter:title", content: "Medição PROJETOS" },
       { property: "og:description", content: "Ranking de técnicos, apontamentos de horas e dashboard financeiro de medição de obra." },
       { name: "twitter:description", content: "Ranking de técnicos, apontamentos de horas e dashboard financeiro de medição de obra." },
       { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/587c55fb-5430-46c6-b924-20f4d692257d/id-preview-8679454b--a29d42d1-d528-4654-af27-7123b45632b8.lovable.app-1779152295973.png" },

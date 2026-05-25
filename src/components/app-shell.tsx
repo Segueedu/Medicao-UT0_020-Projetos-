@@ -21,8 +21,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
           <div className="flex items-center gap-2">
             <div className="h-9 w-9 rounded-md bg-secondary grid place-items-center font-display font-bold text-secondary-foreground">M</div>
             <div>
-              <p className="font-display font-semibold leading-tight">Medição OBR</p>
-              <p className="text-xs text-sidebar-foreground/60">Gestão de equipes</p>
+              <p className="font-display font-semibold leading-tight">Medição PROJETOS</p>
             </div>
           </div>
         </div>

@@ -11,7 +11,7 @@ import { Button } from "@/components/ui/button";
 
 export const Route = createFileRoute("/financeiro/")({
   component: Dashboard,
-  head: () => ({ meta: [{ title: "Dashboard Financeiro — Medição OBR" }] }),
+  head: () => ({ meta: [{ title: "Dashboard Financeiro — Medição PROJETOS" }] }),
 });
 
 const CHART_COLORS = [
